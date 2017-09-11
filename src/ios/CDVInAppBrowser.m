@@ -204,6 +204,7 @@
     self.inAppBrowserViewController.webView.scalesPageToFit = browserOptions.enableviewportscale;
     self.inAppBrowserViewController.webView.mediaPlaybackRequiresUserAction = browserOptions.mediaplaybackrequiresuseraction;
     self.inAppBrowserViewController.webView.allowsInlineMediaPlayback = browserOptions.allowinlinemediaplayback;
+    self.addressLabel.hidden = browserOptions.hiddenAddressLabel;
     if (IsAtLeastiOSVersion(@"6.0")) {
         self.inAppBrowserViewController.webView.keyboardDisplayRequiresUserAction = browserOptions.keyboarddisplayrequiresuseraction;
         self.inAppBrowserViewController.webView.suppressesIncrementalRendering = browserOptions.suppressesincrementalrendering;
@@ -995,6 +996,7 @@
         self.suppressesincrementalrendering = NO;
         self.hidden = NO;
         self.disallowoverscroll = NO;
+        self.hiddenAddressLabel = NO;
     }
 
     return self;
